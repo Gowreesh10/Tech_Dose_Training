@@ -1,3 +1,4 @@
+package Bitmanipulation;
 class SingleNumber {
     public int singleNumber(int[] nums) {
         int xor=0;
@@ -5,4 +6,4 @@ class SingleNumber {
             xor^=nums[i];
         return xor;
     }
-}
+} 
