@@ -1,4 +1,5 @@
-package Bitmanipulation;
+package Bitmanipulation.Assignment;
+import java.util.*;
 public class MajorityElement {
         public int majorityElement(int[] nums) {
             Arrays.sort(nums);

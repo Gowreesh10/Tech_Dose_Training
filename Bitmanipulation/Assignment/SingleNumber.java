@@ -1,4 +1,4 @@
-package Bitmanipulation;
+package Bitmanipulation.Assignment;
 class SingleNumber {
     public int singleNumber(int[] nums) {
         int xor=0;

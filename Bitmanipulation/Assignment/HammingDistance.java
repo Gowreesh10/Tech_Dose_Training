@@ -1,4 +1,4 @@
-package Bitmanipulation;
+package Bitmanipulation.Assignment;
 class HammingDistance {
     public int hammingDistance(int x, int y) {
         int xor=x^y;
