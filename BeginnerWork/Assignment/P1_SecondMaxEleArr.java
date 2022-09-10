@@ -1,7 +1,7 @@
 package BeginnerWork.Assignment;
 import java.util.Arrays;
 import java.util.Scanner;
-public class SecondMaxEleArr {
+public class P1_SecondMaxEleArr {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int size=sc.nextInt();

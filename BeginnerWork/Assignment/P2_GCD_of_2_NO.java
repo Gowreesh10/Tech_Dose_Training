@@ -2,7 +2,7 @@ package BeginnerWork.Assignment;
 
 import java.util.Scanner;
 
-public class GCD_of_2_NO {
+public class P2_GCD_of_2_NO {
     //Euclidean algorithm
     static int gcd(int a,int b){
         if(a==0)
