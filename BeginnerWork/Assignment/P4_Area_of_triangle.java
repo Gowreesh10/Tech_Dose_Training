@@ -1,7 +1,5 @@
 package BeginnerWork.Assignment;
-
 import java.util.Scanner;
-
 public class P4_Area_of_triangle {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
