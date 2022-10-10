@@ -29,6 +29,7 @@ public class subsequences_sum_any1 {
         System.out.println("Enter the sum value:");
         int resultsum=sc.nextInt();
         List<Integer> list=new ArrayList<>();
-        subsequences_sum_any1(0,arr,list,n,sum,resultsum);
+        if(subsequences_sum_any1(0,arr,list,n,sum,resultsum)==false)
+            System.out.println("Not possible");
     }
 }

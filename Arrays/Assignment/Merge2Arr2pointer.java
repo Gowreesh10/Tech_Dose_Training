@@ -1,25 +1,15 @@
 package Arrays.Assignment;
-
 public class Merge2Arr2pointer {
-    public static void main(String[] args) {
-        int[] arr1={1,3,5,7,9};
-        int[] arr2={2,4,6,8,10,11};
-        int len=arr1.length+arr2.length;
-        //int[] res=new int[len];
-        int val=len;
-        int p1=0,p2=0;
-        while(val>0){
-            if(arr1[p1]<arr2[p2]){
-//                res[len-val]=arr1[p1];
-                System.out.print(arr1[p1]+" ");
-                p1++;
-            }
-            else {
-                System.out.print(arr2[p2]+" ");
-                p2++;
-            }
-            System.out.println(val);
-            val--;
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        int k=m+n-1,j=n-1,i=m-1;
+        while(j>=0 && i>=0){
+            if(nums1[i]>nums2[j])
+                nums1[k--]=nums1[i--];
+            else
+                nums1[k--]=nums2[j--];
+        }
+        while(j>=0){
+            nums1[k--]=nums2[j--];
         }
     }
 }
