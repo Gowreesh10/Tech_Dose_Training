@@ -1,4 +1,4 @@
-package LC_WEEKLY_CONTEST_263_to_314_First_Problems;
+package LC_CONTEST_First50_Problems;
 import java.util.*;
 public class LC_WEEKLY_CONTEST_308 {
     public int[] answerQueries(int[] nums, int[] queries) {
