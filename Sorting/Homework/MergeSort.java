@@ -4,42 +4,36 @@ public class MergeSort {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int[] a = new int[n];
+        int[] arr = new int[n];
         for(int i=0;i<n;i++)
-            a[i] = sc.nextInt();
-        mergeSort(a,0,n-1);
-        for(int i=0;i<n;i++)
-            System.out.print(a[i]+" ");
+            arr[i] = sc.nextInt();
+        //calling merge sort method
+        mergeSort(arr,0,arr.length-1);
+        //printing the final array
+        for(int i:arr)
+            System.out.print(i+" ");
     }
-    public static void mergeSort(int[] a,int low ,int high)
-    {
-        if(high == low)
-            return ;
-        int mid = low+(high-low)/2;
-        mergeSort(a,low,mid);
-        mergeSort(a,mid+1,high);
-        merge(a,high,mid,low);
+    static void mergeSort(int[] arr,int low,int high){
+        if(low==high)
+            return;
+        int mid=low+(high-low)/2;
+        mergeSort(arr,low,mid);
+        mergeSort(arr,mid+1,high);
+        //merge the divided elements in sorted way
+        merge(arr,low,mid,high);
     }
-    public static void merge(int[] a, int high, int mid, int low)
-    {
-        int i = low,j=mid+1;
-        int[] m = new int[high+1];
-        int k = low;
-        while(i<=mid && j<=high){
-            if(a[i] > a[j]){
-                m[k++] = a[j];
-                j++;
-            }
-            else{
-                m[k++] = a[i];
-                i++;
-            }
+    static void merge(int[] arr,int low,int mid,int high){
+        int[] temp=new int[high+1];
+        int i=low,j=mid+1,ind=low;
+        while(i<=mid&&j<=high){
+            if(arr[i]<arr[j])
+                temp[ind++]=arr[i++];
+            else temp[ind++]=arr[j++];
         }
-        while(i<=mid)
-            m[k++] = a[i++];
-        while(j<=high)
-            m[k++] = a[j++];
-        for(int index=low;index<=high;index++)
-            a[index] = m[index];
+        while(i<=mid) temp[ind++]=arr[i++];
+        while(j<=high) temp[ind++]=arr[j++];
+        for(int k=low;k<=high;k++){
+            arr[k]=temp[k];
+        }
     }
 }
